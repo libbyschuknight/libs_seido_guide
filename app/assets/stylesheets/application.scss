@@ -15,6 +15,9 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+* {
+  // border: 1px solid grey
+}
  body {
    padding-top: 50px;
  }
@@ -22,3 +25,12 @@
    padding: 40px 15px;
    text-align: center;
  }
+
+.blossom-heading {
+  h1 {
+    max-height: 100px;
+  }
+  img {
+    width: 150px;
+  }
+}
