@@ -14,7 +14,15 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 
+
+
+
+* {
+  font-family: 'Droid Serif', serif;
+  // border: 1px solid grey
+}
  body {
    padding-top: 50px;
  }
@@ -22,3 +30,55 @@
    padding: 40px 15px;
    text-align: center;
  }
+
+.blossom-heading {
+  h1 {
+    max-height: 100px;
+  }
+  img {
+    width: 150px;
+  }
+}
+
+.grid-two {
+  margin-top: 20px;
+
+  h2 {
+    padding: 20px 20px 20px 20px;
+    border: 2px solid #214B95;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+  .button_big {
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    border: 2px solid #214B95;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    // padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .button_big:hover {
+    background-color: #214B95;
+    color: #fff;
+  }
+
+  .button_big:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.6);
+    background: #132B55;
+    border: solid 2px #132B55;
+    color: #fff;
+}
+}
