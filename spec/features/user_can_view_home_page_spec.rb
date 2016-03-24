@@ -1,28 +1,19 @@
 require "rails_helper"
 
 feature "User can view the home page" do
-  scenario "it shows the heading 'Libs Seido Guide' " do
+  background do
     visit '/'
-
-    expect(page).to have_css("h1", :text => "Libs Seido Guide")
-
   end
 
+  scenario "it shows the heading 'Libs Seido Guide' " do
+    expect(page).to have_css("h1", "Libs Seido Guide")
+  end
 
+  scenario "it shows intro text" do
+    expect(page).to have_content("This guide is to help me learn all I need to for my next few gradings.")
+  end
+
+  scenario "it should have a 'Stances' button" do
+    expect(page).to have_button("Stances")
+  end
 end
-
-
-
-#
-# describe "About page" do
-#
-#   it "should have the h1 'About Us'" do
-#     visit '/static_pages/about'
-#   page.should have_selector('h1', :text => 'About Us')
-# end
-# it "should have the title 'About Us'" do
-#   visit '/static_pages/about'
-#   page.should have_selector('title',
-#                 :text => "Ruby on Rails Tutorial Sample App | About Us")
-#   end
-# end
