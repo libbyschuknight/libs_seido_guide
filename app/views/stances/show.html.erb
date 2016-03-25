@@ -1,0 +1,29 @@
+<%= render "layouts/heading", heading: "STANCES" %>
+
+
+<div class="row">
+  <div class="col">
+    <h2><%= @stance.name %></h2>
+
+    <p>
+      <%= @stance.description %>
+    </p>
+
+    <%= link_to image_tag(@stance.image.url(:large)), @stance.image.url %>
+  </div>
+</div>
+
+
+<% if @stance.errors.any? %>
+  <div class="panel panel-warning errors">
+    <div class="panel-heading">
+      <h5><i class="glyphicon glyphicon-exclamation-sign"></i> Found errors while saving</h5>
+    </div>
+
+    <ul class="panel-body">
+      <% @stance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
