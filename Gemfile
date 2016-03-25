@@ -37,10 +37,12 @@ gem 'paperclip'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'launchy', '~> 2.4', '>= 2.4.3'
+  gem "awesome_print"
 end
 
 group :development do
