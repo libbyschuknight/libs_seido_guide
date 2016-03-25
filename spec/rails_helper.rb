@@ -8,10 +8,14 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 require 'capybara/rspec'
+require 'selenium-webdriver'
+
 
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
+
+Capybara.default_driver = :selenium
 
 Capybara.javascript_driver = :chrome
 
@@ -62,5 +66,7 @@ RSpec.configure do |config|
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
-  # config.filter_gems_from_backtrace("gem name")
+  # config.filter_gems_from_backtrace("gem name
+
+  config.include Capybara::DSL
 end

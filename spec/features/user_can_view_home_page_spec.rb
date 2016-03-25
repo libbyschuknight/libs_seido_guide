@@ -16,4 +16,10 @@ feature "User can view the home page" do
   scenario "it should have a 'Stances' button" do
     expect(page).to have_button("Stances")
   end
+
+  scenario "user can click 'Stances' button and is redirected to stances index page" do
+    click_button("Stances")
+
+    expect(page).to have_content("Stances")
+  end
 end
