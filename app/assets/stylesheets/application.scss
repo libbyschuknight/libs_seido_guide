@@ -17,8 +17,6 @@
  @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 
 
-
-
 * {
   font-family: 'Droid Serif', serif;
   // border: 1px solid grey
@@ -86,5 +84,9 @@
     background: #132B55;
     border: solid 2px #132B55;
     color: #fff;
+  }
 }
+
+.form-group {
+  font-size: 25px;
 }

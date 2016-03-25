@@ -7,12 +7,14 @@ RSpec.describe StancesController, type: :controller do
       get :new
     end
 
-    it "should return a new stance page" do
+    it "returns a new stance page" do
       expect(response). to render_template(:new)
     end
 
-    
 
+    it "assignes an instance of Stance to @stance" do
+      expect(assigns(:stance)).to be_an_instance_of(Stance)
+    end
   end
 
 end
