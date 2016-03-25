@@ -18,9 +18,9 @@ feature "User can view the home page" do
   end
 
   scenario "user can click 'Stances' button and is redirected to stances index page" do
-    click_button("Stances")
+    click_link("Stances")
 
     # expect(page).to have_content("thzis is not working")
-    expect(page.current_path).to eq("http://google.com")
+    expect(page.current_path).to eq("")
   end
 end
