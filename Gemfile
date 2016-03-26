@@ -43,6 +43,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'launchy', '~> 2.4', '>= 2.4.3'
   gem "awesome_print"
+  gem 'factory_girl_rails'
 end
 
 group :development do
