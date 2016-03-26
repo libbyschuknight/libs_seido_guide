@@ -5,7 +5,9 @@
     <h2 class="title"><%= @stance.japanese_name %></h2>
     <h3><%= @stance.english_name %></h3>
     <p class="description"><%= @stance.description %></p>
-    <%= link_to image_tag(@stance.image.url(:large)), @stance.image.url %>
+    <%= link_to image_tag(@stance.image.url(:large)), @stance.image.url, :class => "thumbnail" %>
+
+    <!-- <%= image_tag @stance.image(:large), class: "thumbnail" %> -->
   </div>
 </div>
 
