@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe StancesController, type: :controller do
 
+  before do
+    Stance.destroy_all
+  end
+
   describe "#new" do
     before do
       get :new
@@ -90,4 +94,14 @@ RSpec.describe StancesController, type: :controller do
     end
   end
 
+  describe "#index" do
+    before do
+      @stances = FactoryGirl.create_list(:stance, 4)
+    end
+
+    it "finds a list of stances" do
+      get :index, stances: @stances
+      expect(assigns(:stances)).to eq(@stances)
+    end
+  end
 end
