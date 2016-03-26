@@ -10,6 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require_tree .
+ *= require_self
  */
 
  @import "bootstrap-sprockets";
@@ -19,7 +21,7 @@
 
 * {
   font-family: 'Droid Serif', serif;
-  // border: 1px solid grey
+  // border: 1px solid grey;
 }
  body {
    padding-top: 50px;
@@ -32,6 +34,7 @@
 .blossom-heading {
   h1 {
     max-height: 100px;
+    
   }
   img {
     width: 100px;
