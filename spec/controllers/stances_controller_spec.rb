@@ -61,23 +61,18 @@ RSpec.describe StancesController, type: :controller do
   describe "#show" do
     before do
       @stance = FactoryGirl.create(:stance)
+      get :show, id: @stance.id
     end
 
     it "finds a stance" do
-      get :show, id: @stance.id
-
       expect(assigns(:stance).id).to eq(@stance.id)
     end
 
     it "stance has correct japanese_name" do
-      get :show, id: @stance.id
-
       expect(@stance.japanese_name).to eq("Kiba Dachi")
     end
 
     it "stance has correct english_name" do
-      get :show, id: @stance.id
-
       expect(@stance.english_name).to eq("Straddle Stance")
     end
 

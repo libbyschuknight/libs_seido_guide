@@ -1,56 +1,42 @@
+<%= render "layouts/heading", heading: "Lib's Seido Guide" %>
 
+<p class="lead">This guide is to help me learn all I need to for my next few gradings.</p>
 
-
-<div class="container">
-  <div class="starter-template">
-
-    <%= render "layouts/heading", heading: "Lib's Seido Guide" %>
-
-    <p class="lead">This guide is to help me learn all I need to for my next few gradings.</p>
-
-    <div class="row grid-two">
-      <div class="col-sm-6">
-        <button class="button_big disabled">History</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Meaning</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Philosophy</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Foundations</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Kata</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Kumite</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Self-Defence</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Seido Strategies</button>
-      </div>
-      <div class="col-sm-6">
-        <a href="/stances">
-        <button class="button_big">
-            Stances
-        </button>
-      </a>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Natural Weapons</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Hand & Arm Techniques</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Leg Techniques</button>
-      </div>
-      <!-- <a href="/stances">Stances</a> -->
-    </div>
-
+<div class="row grid-two">
+  <div class="col-sm-6">
+    <button class="button_big disabled">History</button>
   </div>
-</div><!-- /.container -->
+  <div class="col-sm-6">
+    <button class="button_big disabled">Meaning</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Philosophy</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Foundations</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Kata</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Kumite</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Self-Defence</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Seido Strategies</button>
+  </div>
+  <div class="col-sm-6">
+    <%= link_to "Stances", stances_path, class: "button_big" %>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Natural Weapons</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Hand & Arm Techniques</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Leg Techniques</button>
+  </div>
+</div>
