@@ -1,8 +1,7 @@
 <%= render "layouts/heading", heading: "STANCES" %>
 
-<%= form_for :stance, url: stances_path, html: { multipart: true} do |f| %>
-
-<% if @stance.errors.any? %>
+<%= form_for :stance, url: stance_path(@stance), method: :patch do |f| %>
+  <% if @stance.errors.any? %>
   <div id="error_explanation">
     <h2>
       <%= pluralize(@stance.errors.count, "error") %> prohibited
@@ -14,7 +13,7 @@
       <% end %>
     </ul>
   </div>
-<% end %>
+  <% end %>
 
   <div class="form-group">
     <%= f.label :japanese_name %>

@@ -16,6 +16,10 @@ class StancesController < ApplicationController
     @stance = Stance.new
   end
 
+  def edit
+    @stance = Stance.find(params[:id])
+  end
+
   def create
     @stance = Stance.new(stance_params)
 
@@ -23,6 +27,16 @@ class StancesController < ApplicationController
       redirect_to @stance
     else
       redirect_to(new_stance_path)
+    end
+  end
+
+  def update
+    @stance = Stance.find(params[:id])
+
+    if @stance.update(stance_params)
+      redirect_to @stance
+    else
+      render "edit"
     end
   end
 
