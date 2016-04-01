@@ -40,6 +40,13 @@ class StancesController < ApplicationController
     end
   end
 
+  def destroy
+    @stance = Stance.find(params[:id])
+    @stance.destroy
+
+    redirect_to stances_path
+  end
+
   private
 
   def stance_params
