@@ -1,43 +1,5 @@
 <%= render "layouts/heading", heading: "STANCES" %>
 
-<%= form_for :stance, url: stance_path(@stance), method: :patch do |f| %>
-  <% if @stance.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= pluralize(@stance.errors.count, "error") %> prohibited
-      this stance from being saved:
-    </h2>
-    <ul>
-      <% @stance.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.label :japanese_name %>
-    <%= f.text_field :japanese_name, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :english_name %>
-    <%= f.text_field :english_name, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :image %>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.submit %>
-  </div>
-<% end %>
+<%= render "form" %>
 
 <%= link_to 'Back', stances_path %>
