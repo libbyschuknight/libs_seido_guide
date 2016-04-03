@@ -1,0 +1,27 @@
+<%= render "layouts/heading", heading: "STANCES" %>
+
+<div class="row">
+  <div class="col">
+    <h2 class="title"><%= @stance.japanese_name %></h2>
+    <h3><%= @stance.english_name %></h3>
+    <p class="description"><%= @stance.description %></p>
+    <%= image_tag @stance.image(:large), { class: "center-block thumbnail" } %>
+    <%= link_to 'Edit', edit_stance_path(@stance), :class => "btn btn-default", :role => "button" %>
+    <%= link_to "Back", stances_path,  :class => "btn btn-default", :role => "button" %>
+  </div>
+</div>
+
+<!-- error message not working? -->
+<% if @stance.errors.any? %>
+  <div class="panel panel-warning errors">
+    <div class="panel-heading">
+      <h5><i class="glyphicon glyphicon-exclamation-sign"></i> Found errors while saving</h5>
+    </div>
+
+    <ul class="panel-body">
+      <% @stance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

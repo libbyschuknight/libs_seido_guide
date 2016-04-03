@@ -1,82 +1,42 @@
+<%= render "layouts/heading", heading: "Lib's Seido Guide" %>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Lib's Seido Guide</a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <!-- <li><a href="#about">About</a></li> -->
-        <!-- <li><a href="#contact">Contact</a></li> -->
-      </ul>
-    </div><!--/.nav-collapse -->
+<p class="lead">This guide is to help me learn all I need to for my next few gradings.</p>
+
+<div class="row grid-two">
+  <div class="col-sm-6">
+    <button class="button_big disabled">History</button>
   </div>
-</nav>
-
-<div class="container">
-  <div class="starter-template">
-    <div class="row blossom-heading">
-      <div class="col-sm-3">
-          <%= image_tag "Plum_Blossum_Blue.jpg", class: "blossom" %>
-      </div>
-      <div class="col-sm-6">
-        <h1>Libs Seido Guide</h1>
-        <p class="lead">This guide is to help me learn all I need to for my next few gradings.</p>
-      </div>
-      <div class="col-sm-3">
-        <%= image_tag "Plum_Blossum_Blue.jpg", class: "blossom" %>
-      </div>
-    </div>
-
-    <div class="row grid-two">
-      <div class="col-sm-6">
-        <button class="button_big disabled">History</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Meaning</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Philosophy</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Foundations</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Kata</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Kumite</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Self-Defence</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Seido Strategies</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big"><a href="/stances">Stances</a></button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Natural Weapons</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Hand & Arm Techniques</button>
-      </div>
-      <div class="col-sm-6">
-        <button class="button_big disabled">Leg Techniques</button>
-      </div>
-
-      <!-- <a href="/stances">Stances</a> -->
-
-
-    </div>
-
+  <div class="col-sm-6">
+    <button class="button_big disabled">Meaning</button>
   </div>
-</div><!-- /.container -->
+  <div class="col-sm-6">
+    <button class="button_big disabled">Philosophy</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Foundations</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Kata</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Kumite</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Self-Defence</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Seido Strategies</button>
+  </div>
+  <div class="col-sm-6">
+    <%= link_to "Stances", stances_path, class: "button_big" %>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Natural Weapons</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Hand & Arm Techniques</button>
+  </div>
+  <div class="col-sm-6">
+    <button class="button_big disabled">Leg Techniques</button>
+  </div>
+</div>
