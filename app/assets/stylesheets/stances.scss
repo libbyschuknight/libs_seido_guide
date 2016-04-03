@@ -1,0 +1,29 @@
+// Place all the styles related to the stances controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//  show
+
+.title {
+  background-color: #214B95;
+  color: #fff;
+  padding: 10px;
+}
+.description {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+// index
+
+.thumbnail img {
+  margin: 20px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.add-button {
+  margin-bottom: 5px;
+}

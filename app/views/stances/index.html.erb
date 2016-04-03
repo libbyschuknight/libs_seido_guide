@@ -1,0 +1,19 @@
+<%= render "layouts/heading", heading: "STANCES" %>
+
+<div class="row add-button">
+  <%= link_to 'Add stance', new_stance_path, :class => "btn btn-default"%>
+</div>
+
+<div class="row items">
+  <% @stances.each do | stance | %>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <h2> <%= stance.japanese_name %> </h2>
+        <%= link_to image_tag(stance.image.url(:med)), stance_path(stance) %>
+        <p><%= link_to "View details", stance_path(stance),  :class => "btn btn-default", :role => "button" %></p>
+          <%= link_to "Update", edit_stance_path(stance),  :class => "btn btn-default", :role => "button" %>
+          <%= link_to "Delete", stance_path(stance), method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-default", :role => "button" %>
+      </div>
+    </div>
+  <% end %>
+</div>
