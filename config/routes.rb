@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :stances
   get 'home/index'
+  get "/:page" => "static_pages#show"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
