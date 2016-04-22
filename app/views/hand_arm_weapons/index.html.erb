@@ -1,0 +1,19 @@
+<%= render "layouts/heading", heading: "Hand-Arm Weapons" %>
+
+<div class="row add-button">
+  <%= link_to 'Add hand-arm weapon', new_hand_arm_weapon_path, :class => "btn btn-default"%>
+</div>
+
+<div class="row items">
+  <% @hand_arm_weapons.each do | hand_arm_weapon | %>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <h2> <%= hand_arm_weapon.japanese_name %> </h2>
+        <%= link_to image_tag(hand_arm_weapon.image.url(:med)), hand_arm_weapon_path(hand_arm_weapon) %>
+        <p><%= link_to "View details", hand_arm_weapon_path(hand_arm_weapon),  :class => "btn btn-default", :role => "button" %></p>
+          <%= link_to "Update", edit_hand_arm_weapon_path(hand_arm_weapon),  :class => "btn btn-default", :role => "button" %>
+          <%= link_to "Delete", hand_arm_weapon_path(hand_arm_weapon), method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-default", :role => "button" %>
+      </div>
+    </div>
+  <% end %>
+</div>
