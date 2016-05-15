@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325233640) do
+ActiveRecord::Schema.define(version: 20160422223643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "hand_arm_weapons", force: :cascade do |t|
+    t.string   "japanese_name"
+    t.string   "english_name"
+    t.string   "description"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "stances", force: :cascade do |t|
     t.string   "description"
