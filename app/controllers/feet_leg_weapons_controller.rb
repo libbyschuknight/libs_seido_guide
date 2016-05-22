@@ -1,0 +1,2 @@
+class FeetLegWeaponsController < ApplicationController
+end
