@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :stances
   resources :hand_arm_weapons
+  resources :feet_leg_weapons
 
   get 'home/index'
   get "/:page" => "static_pages#show"
