@@ -1,0 +1,27 @@
+<%= render "layouts/heading", heading: "Feet-Leg Weapons" %>
+
+<div class="row">
+  <div class="col">
+    <h2 class="title"><%= @feet_leg_weapon.japanese_name %></h2>
+    <h3><%= @feet_leg_weapon.english_name %></h3>
+    <p class="description"><%= @feet_leg_weapon.description %></p>
+    <%= image_tag @feet_leg_weapon.image(:large), { class: "center-block thumbnail" } %>
+    <%= link_to 'Edit', edit_feet_leg_weapon_path(@feet_leg_weapon), :class => "btn btn-default", :role => "button" %>
+    <%= link_to "Back", feet_leg_weapons_path,  :class => "btn btn-default", :role => "button" %>
+  </div>
+</div>
+
+<!-- error message not working? -->
+<% if @feet_leg_weapon.errors.any? %>
+  <div class="panel panel-warning errors">
+    <div class="panel-heading">
+      <h5><i class="glyphicon glyphicon-exclamation-sign"></i> Found errors while saving</h5>
+    </div>
+
+    <ul class="panel-body">
+      <% @feet_leg_weapon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

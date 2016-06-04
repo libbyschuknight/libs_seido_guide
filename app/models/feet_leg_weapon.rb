@@ -1,4 +1,4 @@
-class HandArmWeapon < ActiveRecord::Base
+class FeetLegWeapon < ActiveRecord::Base
   has_attached_file :image, styles: { small: "100x100", med: "200x200", large: "400x400" }
 
   validates :japanese_name, presence: true
