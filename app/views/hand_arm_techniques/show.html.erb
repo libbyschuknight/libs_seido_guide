@@ -1,0 +1,30 @@
+<%= render "layouts/heading", heading: "Hand-Arm Techniques" %>
+
+<div class="row">
+  <div class="col">
+    <h2 class="title"><%= @hand_arm_technique.japanese_name %></h2>
+    <h3><%= @hand_arm_technique.english_name %></h3>
+    <p class="description"><%= @hand_arm_technique.description %></p>
+    <p class="description"><%= @hand_arm_technique.offensive_defensive %></p>
+    <p class="description"><%= @hand_arm_technique.type_technique %></p>
+
+    <%= image_tag @hand_arm_technique.image(:large), { class: "center-block thumbnail" } %>
+    <%= link_to 'Edit', edit_hand_arm_technique_path(@hand_arm_technique), :class => "btn btn-default", :role => "button" %>
+    <%= link_to "Back", hand_arm_techniques_path,  :class => "btn btn-default", :role => "button" %>
+  </div>
+</div>
+
+<!-- error message not working? -->
+<% if @hand_arm_technique.errors.any? %>
+  <div class="panel panel-warning errors">
+    <div class="panel-heading">
+      <h5><i class="glyphicon glyphicon-exclamation-sign"></i> Found errors while saving</h5>
+    </div>
+
+    <ul class="panel-body">
+      <% @hand_arm_technique.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
