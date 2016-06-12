@@ -5,6 +5,8 @@ class StancesController < ApplicationController
   end
 
   def show
+    @first_stance = Stance.all.first
+    @last_stance = Stance.all.last
     @stance = Stance.find_by_id(params[:id])
     unless @stance
       flash[:error] = "Stance not found"
