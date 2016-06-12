@@ -61,4 +61,32 @@ RSpec.describe Stance, type: :model do
 
   end
 
+  context "next and previous records exist" do
+    let!(:stance_1) { FactoryGirl.create(:stance) }
+    let!(:stance_2) { FactoryGirl.create(:stance) }
+
+    it "returns next record" do
+      expect(stance_1.next).to eq(stance_2)
+    end
+
+    it "returns previous record" do
+      expect(stance_2.previous).to eq(stance_1)
+    end
+
+  end
+
+  context "next and previous record do not exist" do
+    let!(:stance) { FactoryGirl.create(:stance) }
+
+    it "next returns nil" do
+      expect(stance.next).to be_nil
+    end
+
+    it "previous returns nil" do
+      expect(stance.previous).to be_nil
+
+    end
+
+  end
+
 end
