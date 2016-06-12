@@ -7,4 +7,13 @@ class Stance < ActiveRecord::Base
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   validates_with AttachmentSizeValidator, attributes: :image, less_than: 1.megabytes
+
+  def next
+    Stance.where(["id > ?", id]).first
+  end
+
+  def previous
+    Stance.where(["id < ?", id]).last
+  end
+
 end
