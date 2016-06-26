@@ -7,10 +7,11 @@ RSpec.feature "User can view stance", type: :feature do
   let!(:stance) { FactoryGirl.create(:stance) }
 
   background do
+    FactoryGirl.create(:stance, japanese_name: "Kokutzo Dachi")
     visit stance_path(stance)
   end
 
-  scenario "shows stances' details" do
+    scenario "shows stances' details" do
     expect(page).to have_content(stance.japanese_name)
     expect(page).to have_content(stance.english_name)
     expect(page).to have_content(stance.description)
@@ -23,9 +24,7 @@ RSpec.feature "User can view stance", type: :feature do
     end
 
     scenario "clicks next button and goes to next stance" do
-      FactoryGirl.create(:stance,japanese_name: "Kokutzo Dachi")
       click_on("next")
-
       expect(page).to have_content("Kokutzo Dachi")
     end
 
