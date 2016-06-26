@@ -5,9 +5,24 @@
     <h2 class="title"><%= @stance.japanese_name %></h2>
     <h3><%= @stance.english_name %></h3>
     <p class="description"><%= @stance.description %></p>
+
+    <% if @stance.previous %>
+      <%= link_to "previous", @stance.previous, :class => "btn btn-default", :role => "button" %>
+    <% end %>
+
+    <% if @stance.next %>
+      <%= link_to "next", @stance.next, :class => "btn btn-default", :role => "button" %>
+    <% end %>
+
+    <%= link_to "first", @first_stance, :class => "btn btn-default", :role => "button" %>
+
+    <%= link_to "last", @last_stance, :class => "btn btn-default", :role => "button" %>
+    <p> </p>
+
     <%= image_tag @stance.image(:large), { class: "center-block thumbnail" } %>
     <%= link_to 'Edit', edit_stance_path(@stance), :class => "btn btn-default", :role => "button" %>
     <%= link_to "Back", stances_path,  :class => "btn btn-default", :role => "button" %>
+
   </div>
 </div>
 
