@@ -8,6 +8,9 @@ FeetLegWeapon.create!([
   {japanese_name: "Ushiro Kakato", english_name: "Back of the heel", description: "Flex the foot to expose the bony part of heel.", image_file_name: "ushiro_kakato.JPG", image_content_type: "image/jpeg", image_file_size: 88152, image_updated_at: "2016-06-06 04:47:41"},
   {japanese_name: "Hiza", english_name: "Knee", description: "Using top of knee, toes are pointed down.", image_file_name: "hiza.JPG", image_content_type: "image/jpeg", image_file_size: 51763, image_updated_at: "2016-06-06 04:48:27"}
 ])
+HandArmTechnique.create!([
+  {japanese_name: "Jodan Uke", english_name: "High Block", description: "High block above head", offensive_defensive: "Defenstive", type_technique: "Uke / Block", image_file_name: nil, image_content_type: nil, image_file_size: nil, image_updated_at: nil}
+])
 HandArmWeapon.create!([
   {japanese_name: "Sei Ken", english_name: "Fist", description: "Use first two knuckles.", image_file_name: "sei_ken.JPG", image_content_type: "image/jpeg", image_file_size: 47041, image_updated_at: "2016-05-15 03:23:42"},
   {japanese_name: "Ippon Ken", english_name: "Middle finger fisr", description: "Keep fist tight, keen 2nd joint of index finger exposed.", image_file_name: "ippon_ken.JPG", image_content_type: "image/jpeg", image_file_size: 50991, image_updated_at: "2016-05-15 03:23:59"},
