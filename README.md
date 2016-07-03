@@ -7,6 +7,30 @@ This is my attempt at learning everything I need to, while making a rails app.
 I train at [Seido Karate Wellington](http://seidowellington.co.nz/).
 
 
+### Heroku
+Pushes to production continually deploy to Heroku.
+
+Run migrations:
+`heroku run rake db:migrate`
+
+Get into console
+`heroku run rails console`
+
+Delete all records e.g
+`Stance.destroy_all`
+
+Run seed task:
+`heroku run rake db:seed`
+
+This app is using:
+`rake db:seed:dump`
+To dump all data to seed file
+
+
+[Getting Started with Rails 4.x on Heroku](https://devcenter.heroku.com/articles/getting-started-with-rails4#migrate-your-database)
+[Heroku Command Line](https://devcenter.heroku.com/articles/using-the-cli)
+
+
 
 
 
