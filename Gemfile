@@ -33,6 +33,8 @@ gem 'puma'
 
 gem 'devise', '~> 4.2'
 
+gem 'cancancan', '~> 1.13', '>= 1.13.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

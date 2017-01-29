@@ -50,6 +50,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.2)
+    cancancan (1.15.0)
     capybara (2.6.2)
       addressable
       mime-types (>= 1.16)
@@ -237,6 +238,7 @@ DEPENDENCIES
   awesome_print
   bootstrap-sass (~> 3.3.6)
   byebug
+  cancancan (~> 1.13, >= 1.13.1)
   capybara
   coffee-rails (~> 4.1.0)
   devise (~> 4.2)
