@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :hand_arm_techniques
   resources :stances
   resources :hand_arm_weapons
