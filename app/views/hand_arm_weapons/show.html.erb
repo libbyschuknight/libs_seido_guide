@@ -9,6 +9,15 @@
     <%= link_to 'Edit', edit_hand_arm_weapon_path(@hand_arm_weapon), :class => "btn btn-default", :role => "button" %>
     <%= link_to "Back", hand_arm_weapons_path,  :class => "btn btn-default", :role => "button" %>
   </div>
+
+  <div class="techniques-meta-details-meta-details">
+    <br>
+    <small>
+      Created by: <%= @hand_arm_weapon.user.username if @hand_arm_weapon.user %>,
+      <%= time_ago_in_words(@hand_arm_weapon.created_at) %> ago,
+      last updated: <%= time_ago_in_words(@hand_arm_weapon.updated_at) %> ago
+    </small>
+  </div>
 </div>
 
 <!-- error message not working? -->

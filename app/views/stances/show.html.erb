@@ -24,6 +24,15 @@
     <%= link_to "Back", stances_path,  :class => "btn btn-default", :role => "button" %>
 
   </div>
+
+  <div class="techniques-meta-details-meta-details">
+    <br>
+    <small>
+      Created by: <%= @stance.user.username if @stance.user %>,
+      <%= time_ago_in_words(@stance.created_at) %> ago,
+      last updated: <%= time_ago_in_words(@stance.updated_at) %> ago
+    </small>
+  </div>
 </div>
 
 <!-- error message not working? -->
