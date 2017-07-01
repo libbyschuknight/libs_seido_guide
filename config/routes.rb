@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :hand_arm_weapons
   resources :feet_leg_weapons
 
+  get "signup", to: "users#new"
+
+  resources :users, except: [:new]
+
   get 'home/index'
   get "/:page" => "static_pages#show"
 
