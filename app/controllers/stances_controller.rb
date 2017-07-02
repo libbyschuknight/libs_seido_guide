@@ -1,7 +1,7 @@
 class StancesController < ApplicationController
 
   def index
-    @stances = Stance.all
+    @stances = Stance.paginate(page: params[:page], per_page: 6)
   end
 
   def show

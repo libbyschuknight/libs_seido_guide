@@ -1,7 +1,7 @@
 class HandArmWeaponsController < ApplicationController
-
   def index
-    @hand_arm_weapons = HandArmWeapon.all
+    @hand_arm_weapons = HandArmWeapon.paginate(page: params[:page], per_page: 6)
+
   end
 
   def show
