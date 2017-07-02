@@ -13,6 +13,15 @@
         <p><%= link_to "View details", stance_path(stance),  :class => "btn btn-default", :role => "button" %></p>
           <%= link_to "Update", edit_stance_path(stance),  :class => "btn btn-default", :role => "button" %>
           <%= link_to "Delete", stance_path(stance), method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-default", :role => "button" %>
+
+          <div class="techniques-meta-details-meta-details">
+            <br>
+            <small>
+              Created by: <%= stance.user.username if stance.user %>,
+              <%= time_ago_in_words(stance.created_at) %> ago,
+              last updated: <%= time_ago_in_words(stance.updated_at) %> ago
+            </small>
+          </div>
       </div>
     </div>
   <% end %>

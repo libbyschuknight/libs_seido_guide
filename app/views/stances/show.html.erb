@@ -25,15 +25,29 @@
 
   </div>
 
-  <div class="techniques-meta-details-meta-details">
-    <br>
-    <small>
-      Created by: <%= @stance.user.username if @stance.user %>,
-      <%= time_ago_in_words(@stance.created_at) %> ago,
-      last updated: <%= time_ago_in_words(@stance.updated_at) %> ago
-    </small>
-  </div>
+  <% if @stance.user %>
+    <ul class="listing">
+      <div class="row center">
+        <div class="col-md-4 col-md-offset-4">
+          <li>Created by:</li>
+          <li>
+            <%= link_to gravatar_for(@stance.user), user_path(@stance.user) %>
+          </li>
+          <li class="stance-title">
+            <%= link_to @stance.user.username, user_path(@stance.user) %>
+          </li>
+          <li>
+            <small>
+              <%= pluralize(@stance.user.stances.count, "stance") if @stance.user.stances %>
+            </small>
+          </li>
+        </div>
+      </div>
+    </ul>
+  <% end %>
+
 </div>
+
 
 <!-- error message not working? -->
 <% if @stance.errors.any? %>
