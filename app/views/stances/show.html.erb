@@ -46,10 +46,10 @@
     </ul>
   <% end %>
 
-  <% if logged_in? && (current_user == stance.user || current_user.admin?) %>
+  <% if logged_in? && (current_user == @stance.user || current_user.admin?) %>
     <div class="stance-actions">
-      <%= link_to "Edit", edit_stance_path(stance), class: "btn btn-xs btn-primary" %>
-      <%= link_to "Delete", stance_path(stance),
+      <%= link_to "Edit", edit_stance_path(@stance), class: "btn btn-xs btn-primary" %>
+      <%= link_to "Delete", stance_path(@stance),
           method: :delete,
           data: { confirm: "Are you sure you want to delete the stance?" },
           class: "btn btn-xs btn-danger"

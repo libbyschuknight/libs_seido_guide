@@ -24,6 +24,18 @@
               last updated: <%= time_ago_in_words(stance.updated_at) %> ago
             </small>
           </div>
+
+          <% if logged_in? && (current_user == stance.user || current_user.admin?) %>
+          <div class="stance-actions">
+            <%= link_to "Edit this stance", edit_stance_path(stance), class: "btn btn-xs btn-primary" %>
+            <%= link_to "Delete this stance", stance_path(stance),
+                method: :delete,
+                data: { confirm: "Are you sure you want to delete the stance?" },
+                class: "btn btn-xs btn-danger"
+            %>
+          </div>
+        <% end %>
+
       </div>
     </div>
   <% end %>
