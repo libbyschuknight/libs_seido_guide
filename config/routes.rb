@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :hand_arm_weapons
   resources :feet_leg_weapons
 
-  get "signup", to: "users#new"
+  # get "signup", to: "users#new"
 
   resources :users, except: [:new]
 
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root "sessions#new"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
