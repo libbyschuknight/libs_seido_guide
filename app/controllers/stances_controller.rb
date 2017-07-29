@@ -4,11 +4,7 @@ class StancesController < ApplicationController
   before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def index
-    if logged_in?
-      @stances = Stance.paginate(page: params[:page], per_page: 6)
-    else
-      redirect_to root_path
-    end
+    @stances = Stance.paginate(page: params[:page], per_page: 6)
   end
 
   def show
