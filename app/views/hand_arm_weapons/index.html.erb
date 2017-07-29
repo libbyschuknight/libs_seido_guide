@@ -5,6 +5,7 @@
   <%= link_to 'Weapons & Techniques', "/weapons_techniques", :class => "btn btn-default"%>
 </div>
 
+<%= will_paginate %>
 <div class="row items">
   <% @hand_arm_weapons.each do | hand_arm_weapon | %>
     <div class="col-md-4">
@@ -18,3 +19,5 @@
     </div>
   <% end %>
 </div>
+
+<%= will_paginate %>

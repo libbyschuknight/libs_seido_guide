@@ -20,11 +20,24 @@
     <p> </p>
 
     <%= image_tag @stance.image(:large), { class: "center-block thumbnail" } %>
-    <%= link_to 'Edit', edit_stance_path(@stance), :class => "btn btn-default", :role => "button" %>
     <%= link_to "Back", stances_path,  :class => "btn btn-default", :role => "button" %>
 
   </div>
+
+  <% if logged_in? && (current_user == @stance.user || current_user.admin?) %>
+    <div class="stance-actions">
+      <%= link_to 'Edit', edit_stance_path(@stance), :class => "btn btn-default", :role => "button" %>
+      <%= link_to "Edit", edit_stance_path(@stance), class: "btn btn-xs btn-primary" %>
+      <%= link_to "Delete", stance_path(@stance),
+          method: :delete,
+          data: { confirm: "Are you sure you want to delete the stance?" },
+          class: "btn btn-xs btn-danger"
+      %>
+    </div>
+  <% end %>
+
 </div>
+
 
 <!-- error message not working? -->
 <% if @stance.errors.any? %>
