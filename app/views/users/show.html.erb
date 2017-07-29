@@ -5,16 +5,3 @@
     <%= gravatar_for(@user, size: 150) %>
   </div>
 </div>
-
-<h4 align="center"><%= @user.username %>'s Stances</h4>
-<div class="center">
-  <!-- < will_paginate @user_articles %> -->
-</div>
-
-<!-- < render "articles/article", object: @user_articles %> -->
-
-<%= @user.stances.inspect  %>
-
-<div class="center">
-  <!-- < will_paginate @user_articles %> -->
-</div>

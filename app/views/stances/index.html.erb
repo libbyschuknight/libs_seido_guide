@@ -27,7 +27,6 @@
           <%= link_to "Delete", stance_path(stance), method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-default", :role => "button" %>
         </div>
       <% end %>
-
           <div class="techniques-meta-details-meta-details">
             <br>
             <small>
@@ -36,12 +35,8 @@
               last updated: <%= time_ago_in_words(stance.updated_at) %> ago
             </small>
           </div>
-
-
-
       </div>
     </div>
   <% end %>
-
 </div>
 <%= will_paginate %>
