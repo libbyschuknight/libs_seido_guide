@@ -15,7 +15,6 @@
           </li>
           <li>
             <small>
-              <%= pluralize(user.stances.count, "stance") if user.stances %>
               <% if logged_in? && current_user.admin? %>
                 <li>
                   <%= link_to "Delete this user",

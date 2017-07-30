@@ -27,8 +27,6 @@ class StancesController < ApplicationController
 
   def create
     @stance = Stance.new(stance_params)
-    @stance.user = current_user
-
     if @stance.save
       redirect_to @stance
     else

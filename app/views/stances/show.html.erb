@@ -24,7 +24,7 @@
 
   </div>
 
-  <% if logged_in? && (current_user == @stance.user || current_user.admin?) %>
+  <% if logged_in? && (current_user.admin?) %>
     <div class="stance-actions">
       <%= link_to 'Edit', edit_stance_path(@stance), :class => "btn btn-default", :role => "button" %>
       <%= link_to "Edit", edit_stance_path(@stance), class: "btn btn-xs btn-primary" %>
