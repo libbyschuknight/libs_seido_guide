@@ -12,15 +12,6 @@
     <%= link_to 'Edit', edit_hand_arm_technique_path(@hand_arm_technique), :class => "btn btn-default", :role => "button" %>
     <%= link_to "Back", hand_arm_techniques_path,  :class => "btn btn-default", :role => "button" %>
   </div>
-
-  <div class="techniques-meta-details-meta-details">
-    <br>
-    <small>
-      Created by: <%= @hand_arm_technique.user.username if @hand_arm_technique.user %>,
-      <%= time_ago_in_words(@hand_arm_technique.created_at) %> ago,
-      last updated: <%= time_ago_in_words(@hand_arm_technique.updated_at) %> ago
-    </small>
-  </div>
 </div>
 
 <!-- error message not working? -->

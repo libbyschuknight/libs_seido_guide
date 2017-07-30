@@ -1,7 +1,7 @@
 <%= render "layouts/heading", heading: "STANCES" %>
 
 <div class="row add-button">
-  <% if logged_in? && (current_user == @stances.first.user || current_user.admin?) %>
+  <% if logged_in? && (current_user.admin?) %>
     <%= link_to 'Add stance', new_stance_path, :class => "btn btn-default"%>
   <% end %>
 </div>
@@ -15,7 +15,7 @@
         <h2> <%= stance.japanese_name %> </h2>
         <%= link_to image_tag(stance.image.url(:med)), stance_path(stance) %>
 
-        <% if logged_in? && (current_user == stance.user || current_user.admin?) %>
+        <% if logged_in? && (current_user.admin?) %>
         <div class="stance-actions">
           <%= link_to "Edit this stance", edit_stance_path(stance), class: "btn btn-xs btn-primary" %>
           <%= link_to "Delete this stance", stance_path(stance),
@@ -26,15 +26,7 @@
           <%= link_to "Update", edit_stance_path(stance),  :class => "btn btn-default", :role => "button" %>
           <%= link_to "Delete", stance_path(stance), method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-default", :role => "button" %>
         </div>
-      <% end %>
-          <div class="techniques-meta-details-meta-details">
-            <br>
-            <small>
-              Created by: <%= stance.user.username if stance.user %>,
-              <%= time_ago_in_words(stance.created_at) %> ago,
-              last updated: <%= time_ago_in_words(stance.updated_at) %> ago
-            </small>
-          </div>
+        <% end %>
       </div>
     </div>
   <% end %>

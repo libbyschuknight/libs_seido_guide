@@ -9,16 +9,6 @@
     <%= link_to 'Edit', edit_feet_leg_weapon_path(@feet_leg_weapon), :class => "btn btn-default", :role => "button" %>
     <%= link_to "Back", feet_leg_weapons_path,  :class => "btn btn-default", :role => "button" %>
   </div>
-
-  <div class="techniques-meta-details-meta-details">
-    <br>
-    <small>
-      Created by: <%= @feet_leg_weapon.user.username if @feet_leg_weapon.user %>,
-      <%= time_ago_in_words(@feet_leg_weapon.created_at) %> ago,
-      last updated: <%= time_ago_in_words(@feet_leg_weapon.updated_at) %> ago
-    </small>
-  </div>
-
 </div>
 
 <!-- error message not working? -->
